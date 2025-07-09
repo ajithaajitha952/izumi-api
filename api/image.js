@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   try {
-    const filePath = path.resolve('media/image.json');
+    const filePath = path.resolve('media/image.png.json');
     const data = JSON.parse(fs.readFileSync(filePath));
     const url = data[Math.floor(Math.random() * data.length)];
     console.log('Fetching image from URL:', url);
